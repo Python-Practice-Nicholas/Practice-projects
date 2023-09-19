@@ -1,6 +1,8 @@
 
 
 class Calculator:
+    def __init__(self):
+        pass
 
     # Bacis Math Operations
     def add(self, num1, num2):
@@ -26,12 +28,12 @@ class Calculator:
                 tracker.update({expression[i]: i})
 
         if tracker == {}:
-            return expression
+            return self.check_operator(expression)
         else:
             inside_para = expression[tracker["("] + 1: tracker[")"]]
-            return inside_para
+            return self.check_operator(inside_para)
 
-    def check_operator(expression):
+    def check_operator(self, expression):
         number_lst = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         num1 = ""
         num2 = ""
@@ -58,3 +60,14 @@ class Calculator:
             return ["multiply", int(num1), int(num2)]
         elif operator == "/":
             return ["divide", int(num1), int(num2)]
+
+    def select_operation(self, lst):
+
+        if lst[0] == "add":
+            return self.add(lst[1], lst[2])
+        elif lst[0] == "subtract":
+            return self.sutract(lst[1], lst[2])
+        elif lst[0] == "multiply":
+            return self.multiply(lst[1], lst[2])
+        elif lst[0] == "divide":
+            return self.divide(lst[1], lst[2])
