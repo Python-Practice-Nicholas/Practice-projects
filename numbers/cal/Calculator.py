@@ -31,7 +31,15 @@ class Calculator:
             return self.check_operator(expression)
         else:
             inside_para = expression[tracker["("] + 1: tracker[")"]]
-            return self.check_operator(inside_para)
+
+            if tracker[")"] != len(expression) - 1:
+                outside_para = list(expression[tracker[")"] + 1::])
+                checked_inside_para = self.check_operator(inside_para)
+                inside_para_value = self.select_operation(checked_inside_para)
+                outside_para.insert(0, str(inside_para_value))
+                return self.check_operator(outside_para)
+            else:
+                return self.check_operator(inside_para)
 
     def check_operator(self, expression):
         number_lst = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -66,7 +74,7 @@ class Calculator:
         if lst[0] == "add":
             return self.add(lst[1], lst[2])
         elif lst[0] == "subtract":
-            return self.sutract(lst[1], lst[2])
+            return self.subtract(lst[1], lst[2])
         elif lst[0] == "multiply":
             return self.multiply(lst[1], lst[2])
         elif lst[0] == "divide":
