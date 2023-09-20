@@ -10,6 +10,6 @@ def cal():
         if expression.lower() == "q":
             print("Goodbye")
             break
-        lst = calculator.find_para(expression)
-
-        print(calculator.select_operation(lst))
+        else:
+            lst = calculator.find_para(expression)
+            print(calculator.select_operation(lst))

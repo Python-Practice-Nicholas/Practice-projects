@@ -13,6 +13,6 @@ from numbers.binary_to_decimal_converter.app import binary_to_decimal
 
 #next_prime_number()
 
-print(cal())
+cal()
 
 #print(binary_to_decimal(1010))
