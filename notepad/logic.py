@@ -7,8 +7,9 @@ def create_dir():
     new_dir = "files"
     # new_dir_path = os.path.join(current_dir, new_dir)
     os.mkdir(new_dir)
-    os.chdir("/home/user/practice-projects/strings/notepad")
-    return new_dir
+    os.chdir("/home/user/practice-projects/strings/notepad/files")
+    return os.getcwd()
+
 
 def delete_dir():
     pass
@@ -16,8 +17,8 @@ def delete_dir():
 
 def create_new_file(path):
     os.chdir(path)
-    with open(f"{path}/newFile.txt") as f:
-        pass
+    f = open(f"{path}/newFile.txt")
+    f.close()
     return f"{path}/newFile.txt"
 
 
