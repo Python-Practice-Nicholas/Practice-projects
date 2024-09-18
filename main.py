@@ -5,18 +5,6 @@
 # from numbers.cal.app import cal
 # from numbers.binary_to_decimal_converter.app import binary_to_decimal
 # from practice.numbers.change_return.app import change
+# from practice.numbers.tile_floor.app import tile_floor
 
-# print(find_PI_to_the_nth(2))
-
-# print(fibonacci_sequence(15))
-
-# print(prime_factorization(5))
-
-# next_prime_number()
-
-# cal()
-
-# print(binary_to_decimal(1010))
-
-# change()
 
