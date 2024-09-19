@@ -6,5 +6,9 @@
 # from numbers.binary_to_decimal_converter.app import binary_to_decimal
 # from practice.numbers.change_return.app import change
 # from practice.numbers.tile_floor.app import tile_floor
+from practice.numbers.mortagage_cal.app import cal_mortgage
+
+
+print(cal_mortgage(300000.00, 4.750, 360.00)) # Should be 1,565
 
 
