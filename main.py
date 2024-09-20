@@ -3,12 +3,11 @@
 # from numbers.prime_factorization.app import prime_factorization
 # from numbers.next_prime_number.app import next_prime_number
 # from numbers.cal.app import cal
-# from numbers.binary_to_decimal_converter.app import binary_to_decimal
+from practice.numbers.binary_to_decimal_converter.app import swap_back
 # from practice.numbers.change_return.app import change
 # from practice.numbers.tile_floor.app import tile_floor
-from practice.numbers.mortagage_cal.app import cal_mortgage
+# from practice.numbers.mortagage_cal.app import cal_mortgage
 
 
-print(cal_mortgage(300000.00, 4.750, 360.00)) # Should be 1,565
 
-
+swap_back("0010")
